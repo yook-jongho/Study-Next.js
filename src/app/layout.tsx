@@ -14,7 +14,7 @@ export const metadata = {
 };
 export default async function RootLayout({ children }: Props) {
     const response = await fetch("http://localhost:9999/topics", {
-        cache: "no-cache",
+        cache: "no-cache", //케쉬를 사용하지 않아야 추가된 글 목록을 바로 불러옴
     });
     const topics = await response.json();
     console.log(topics);
