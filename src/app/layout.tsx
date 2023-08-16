@@ -34,14 +34,7 @@ export default async function RootLayout({ children }: Props) {
                         );
                     })}
                 </ol>
-                <ol>
-                    <li>
-                        <Link href="/read/1">html</Link>
-                    </li>
-                    <li>
-                        <Link href="/read/2">css</Link>
-                    </li>
-                </ol>
+
                 {children}
                 <ul>
                     <li>
