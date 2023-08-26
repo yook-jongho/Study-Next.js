@@ -1,5 +1,10 @@
+//server component는 동적 라우터 id값을 알 수 없음
+//client component만 알 수 있다. => controll 컴포넌트를 통해서 useParma 기능을 활용.
+//부분 client component 사용
+
 import Link from "next/link";
 import "./globals.css";
+import { Controll } from "./Controll";
 
 interface Props {
     children: React.ReactNode;
@@ -38,17 +43,7 @@ export default async function RootLayout({ children }: Props) {
                 </ol>
 
                 {children}
-                <ul>
-                    <li>
-                        <Link href="/create">create</Link>
-                    </li>
-                    <li>
-                        <Link href="/update/id">update</Link>
-                    </li>
-                    <li>
-                        <button>delete</button>
-                    </li>
-                </ul>
+                <Controll />
             </body>
         </html>
     );
